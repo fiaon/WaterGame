@@ -38,6 +38,8 @@ cc.Class({
     onLoad () {
         this.contentHeight =0;                                                     //父物体高度
         this.conentSpacing = this.content.getComponent(cc.Layout).spacingY;        //子物体间距
+        this.labelHeight = this.textprefab.data.height                              //字体行高
+        this.conentJG = this.conentSpacing + this.labelHeight;
         this.textList =[];
 
         this.oldDragPos  =null;
@@ -61,10 +63,11 @@ cc.Class({
         //this.content.setAnchorPoint(this.content.anchorX,this.conentLimit);
         this.node.on('scroll-began', this.onScrollBeganEvent, this);
         this.node.on('scroll-ended', this.onScrollEndedEvent, this);
-        let _height = 805;
+        let _height = this.content.height/2-this.labelHeight/2;
+        console.log("height: "+_height);
         for(let i =0;i<this.content.childrenCount;i++){
             if(i>0){
-                _height -= 70;
+                _height -= this.conentJG;
             }
             this.textList.push(_height);
         }
@@ -88,13 +91,13 @@ cc.Class({
     //滑动结束
     onScrollEndedEvent(event){
         this.newDragPos = event.getContentPosition();
-        if (Math.abs(this.newDragPos.y - this.oldDragPos.y) >= 70) {
+        if (Math.abs(this.newDragPos.y - this.oldDragPos.y) >= this.conentJG) {
             if (this.newDragPos.y > this.oldDragPos.y) {
                 this.content.setPosition(this.content.x,this.closest(this.content.y));
-                this.oldDragPos.y += 70;
+                this.oldDragPos.y += this.conentJG;
             }else{
                 this.content.setPosition(this.content.x,this.closest(this.content.y));
-                this.oldDragPos.y -= 70;
+                this.oldDragPos.y -= this.conentJG;
             }
             console.log("pos: "+this.content.position);
         }else{
@@ -105,10 +108,10 @@ cc.Class({
     //itemnum:数量 max最大值
     init(itemnum,max){
         var go = null;
-        this.content.height = itemnum*40+(max-1)*this.conentSpacing;
+        this.content.height = itemnum*this.labelHeight+(max-1)*this.conentSpacing;
         this.contentHeight =this.content.height;
-        this.itemHeight_min = this.contentHeight /2 -20;            //子项最小发生改变位置
-        this.itemHeight_max = -this.contentHeight /2 +20;           //子项最大发生改变位置
+        // this.itemHeight_min = this.contentHeight /2 -20;            //子项最小发生改变位置
+        // this.itemHeight_max = -this.contentHeight /2 +20;           //子项最大发生改变位置
         if(this.itemtype == Itemtype._hour){
             for(let i = max-itemnum+1;i<=max;i++){
                 go = cc.instantiate(this.textprefab);
