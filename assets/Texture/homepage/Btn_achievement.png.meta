@@ -6,7 +6,7 @@
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
   "subMetas": {
-    "Btn_achievement": {
+    "btn_achievement": {
       "ver": "1.0.3",
       "uuid": "5b977e79-4569-4fda-8f2b-7aacc301cffd",
       "rawTextureUuid": "fee8e65f-dba6-49bd-ae44-69a62aa3c546",
@@ -17,10 +17,10 @@
       "offsetY": 0,
       "trimX": 0,
       "trimY": 0,
-      "width": 114,
-      "height": 96,
-      "rawWidth": 114,
-      "rawHeight": 96,
+      "width": 107,
+      "height": 118,
+      "rawWidth": 107,
+      "rawHeight": 118,
       "borderTop": 0,
       "borderBottom": 0,
       "borderLeft": 0,

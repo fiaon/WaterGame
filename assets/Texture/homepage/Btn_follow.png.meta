@@ -6,7 +6,7 @@
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
   "subMetas": {
-    "Btn_follow": {
+    "btn_follow": {
       "ver": "1.0.3",
       "uuid": "457082c8-ed75-4006-b09d-f8dc5917ba70",
       "rawTextureUuid": "2eff6ae5-03b9-41fd-b5b1-8973aa0fcce5",
@@ -14,13 +14,13 @@
       "trimThreshold": 1,
       "rotated": false,
       "offsetX": 0,
-      "offsetY": -2,
+      "offsetY": 0,
       "trimX": 0,
-      "trimY": 4,
-      "width": 114,
-      "height": 96,
-      "rawWidth": 114,
-      "rawHeight": 100,
+      "trimY": 0,
+      "width": 107,
+      "height": 118,
+      "rawWidth": 107,
+      "rawHeight": 118,
       "borderTop": 0,
       "borderBottom": 0,
       "borderLeft": 0,

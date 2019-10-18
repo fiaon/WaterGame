@@ -167,7 +167,7 @@ cc.Class({
             //this.ShowItem(false);
             this.content.setPosition(this.content.x,this.closest(this.content.y));
         }
-        console.log("pos: "+this.content.position);
+        console.log("纠正pos: "+this.content.position);
     },
     // update (dt) {},
 });

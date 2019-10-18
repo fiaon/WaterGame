@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "2c487af0-65ca-44af-bf67-0abd856d849a",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "img_drinkplan_2": {
+      "ver": "1.0.3",
+      "uuid": "ef7a141b-a9be-4f7a-b11e-42f9d8519463",
+      "rawTextureUuid": "2c487af0-65ca-44af-bf67-0abd856d849a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 2,
+      "trimY": 2,
+      "width": 132,
+      "height": 39,
+      "rawWidth": 136,
+      "rawHeight": 43,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
